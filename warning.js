@@ -14,11 +14,11 @@
  * same logic and follow the same code paths.
  */
 
-var __DEV__ = process.env.NODE_ENV !== 'production';
+var __DEV__FIX = process.env.NODE_ENV !== 'production';
 
 var warning = function() {};
 
-if (__DEV__) {
+if (__DEV__FIX) {
   var printWarning = function printWarning(format, args) {
     var len = arguments.length;
     args = new Array(len > 1 ? len - 1 : 0);
@@ -59,4 +59,5 @@ if (__DEV__) {
   };
 }
 
-module.exports = warning;
+//module.exports = warning;
+export default warning;
